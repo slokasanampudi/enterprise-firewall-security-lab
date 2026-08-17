@@ -1,0 +1,22 @@
+# Enterprise Firewall Security Lab
+# Splunk Investigation Queries
+
+
+# 1. Review all firewall events
+index=firewall_lab
+| table _time src_ip src_zone dest_ip dest_port protocol action rule_id message
+
+
+# 2. Compare allowed vs denied traffic
+index=firewall_lab
+| stats count by action
+
+
+# 3. Investigate externally allowed SSH traffic
+index=firewall_lab dest_port=22 src_zone=internet action=ALLOW
+| table _time src_ip src_zone dest_ip dest_port action rule_id message
+
+
+# 4. Identify firewall rules responsible for external SSH exposure
+index=firewall_lab dest_port=22 src_zone=internet action=ALLOW
+| stats count values(src_ip) as source_ips by rule_id dest_ip
