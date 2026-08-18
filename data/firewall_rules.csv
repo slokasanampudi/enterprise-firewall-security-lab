@@ -1,0 +1,6 @@
+rule_id,rule_name,src_zone,dest_ip,dest_port,protocol,action,temporary
+101,Employee HTTPS,employee,10.0.20.10,443,TCP,ALLOW,false
+102,Employee DNS,employee,10.0.20.53,53,UDP,ALLOW,false
+103,Administrator SSH,admin,10.0.20.10,22,TCP,ALLOW,false
+201,Block External SSH,internet,10.0.20.10,22,TCP,DENY,false
+999,Temporary External SSH,internet,10.0.20.10,22,TCP,ALLOW,true

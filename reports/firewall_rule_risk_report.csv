@@ -1,0 +1,6 @@
+rule_id,rule_name,risk,score,reasons
+101,Employee HTTPS,LOW,0,No significant exposure detected
+102,Employee DNS,LOW,0,No significant exposure detected
+103,Administrator SSH,LOW,0,No significant exposure detected
+201,Block External SSH,LOW,0,No significant exposure detected
+999,Temporary External SSH,CRITICAL,100,Allows traffic from the Internet; Exposes SSH to the Internet; Temporary firewall rule is enabled; Internet traffic can reach an internal IP
