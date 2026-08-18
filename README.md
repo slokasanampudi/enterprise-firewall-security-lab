@@ -1,6 +1,6 @@
 # Enterprise Firewall Security Lab
 
-A cybersecurity portfolio project simulating the detection, investigation, risk analysis, and remediation of a misconfigured enterprise firewall rule.
+I created a cybersecurity project simulating the detection, investigation, risk analysis, and remediation of a misconfigured enterprise firewall rule.
 
 ## Scenario
 
